@@ -1,0 +1,15 @@
+<div>
+  <h3>Add Performance for <%= supplier.name %></h3>
+  <form hx-post="/suppliers/<%= supplier.id %>/performance" hx-target="#modal-body" hx-swap="innerHTML">
+    <label>On-Time Delivery (%)</label>
+    <input type="number" name="onTimeDelivery" min="0" max="100" required />
+
+    <label>Quality Rating (1-5)</label>
+    <input type="number" name="quality" min="1" max="5" required />
+
+    <label>Cost Efficiency (%)</label>
+    <input type="number" name="costEfficiency" min="0" max="100" required />
+
+    <button type="submit" class="btn btn-primary">Save Performance</button>
+  </form>
+</div>
